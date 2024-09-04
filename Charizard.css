@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+:root {
+    --primary-color: #ff6f00; /* Laranja queimado como cor principal */
+    --secondary: #ff4500; /* Vermelho queimado para detalhes */
+    --wing-color: #e64a19; /* Vermelho mais escuro para as asas */
+    --flame-color: #ff5722; /* Cor laranja intensa para chamas */
+}
+body {
+    background-color: var(--primary-color);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding-inline: 64px;
+    font-family: "Righteous", sans-serif;
+}
+header {
+    height: 100px;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+}
+header div {
+    display: flex;
+    gap: 24px;
+}
+header a {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-size: 24px;
+    color: var(--secondary);
+}
+main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.title {
+    position: relative;
+    text-align: center;
+    color: #fff5f0; /* Cor clara para destacar o título */
+}
+.title h1 {
+    font-size: 20vw;
+    color: var(--secondary); /* Cor para o título principal */
+}
+.title span {
+    position: absolute;
+    font-size: 25vw;
+    top: -30%;
+    left: 0;
+    opacity: 0.3;
+    color: var(--flame-color); /* Cor das chamas */
+}
+.container {
+    display: flex;
+    color: var(--secondary);
+}
+.container div {
+    width: 50%;
+    z-index: 1;
+}
+.container h2 {
+    font-size: 4vw;
+}
+.container p {
+    font-size: 1.5vw;
+    width: 35vw;
+}
+.action {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+.container a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 48px;
+    background-color: var(--secondary);
+    height: 100px;
+    width: 400px;
+    color: white;
+}
+footer {
+    height: 50px;
+    color: var(--secondary);
+    text-align: center;
+    font-style: italic;
+}
+.mimikyu-image {
+    position: absolute;
+    top: 50%;
+    left: 52%;
+    transform: translate(-50%, -50%);
+    height: 75vh;
+}
+
+/* Adicionando o estilo inspirado no Charizard */
+.charizard {
+    background: radial-gradient(circle, #ff4500 0%, #e64a19 100%);
+    border-radius: 50%;
+    position: relative;
+    width: 200px;
+    height: 200px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    margin: 0 auto;
+}
+
+.charizard::before,
+.charizard::after {
+    content: '';
+    position: absolute;
+    top: 10%;
+    width: 80px;
+    height: 100px;
+    background: linear-gradient(to bottom, #ff4500, #e64a19);
+    border-radius: 50% 50% 0 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+.charizard::before {
+    left: -50px;
+    transform: rotate(-30deg);
+}
+
+.charizard::after {
+    right: -50px;
+    transform: rotate(30deg);
+}
